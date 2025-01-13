@@ -1,77 +1,115 @@
-# WebUI Extensions
+# Open WebUI Extensions
 
-A collection of tools, functions, and utilities for extending Open WebUI capabilities.
+A collection of tools, functions, and utilities for extending Open WebUI capabilities. This repository is designed to enhance the functionality of Open WebUI by providing additional integrations, plugins, and utilities.
 
-## Extensions
+## Table of Contents
+- [Introduction](#introduction)
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
+- [Author](#author)
 
-### DeepSeek API Integration (v1.0.0)
+## Introduction
 
-A comprehensive Python implementation for integrating DeepSeek's V3 API with Open WebUI. This module provides a robust interface to DeepSeek's advanced language model capabilities while maintaining full compatibility with Open WebUI's plugin architecture.
+This repository contains extensions for Open WebUI, a powerful interface for interacting with various AI models. The goal is to provide additional functionality and integrations that can be easily added to your Open WebUI setup.
 
-#### Key Features
+## Features
 
-1. **Model Capabilities**
-   - DeepSeek V3 Integration with 671B MoE parameters
-   - High Performance: 60 tokens/second throughput
-   - Large Context: 8192 token context window
-   - Vision Support: Process and analyze image inputs
+- **DeepSeek V3 Integration**: Advanced language model integration with features like high performance, large context windows, and vision support.
+- **Extensible Architecture**: Easily add new extensions and plugins to enhance your Open WebUI experience.
+- **Comprehensive Documentation**: Clear and concise instructions to help you get started quickly.
 
-2. **Output Formats**
-   - Text Generation: Standard text completion responses
-   - JSON Mode: Validated JSON output with schema enforcement
-   - Streaming: Real-time token-by-token responses
-   - Function Calling: Define and execute external functions
+## Installation
 
-3. **Resource Management**
-   - Context Caching: Efficient token reuse with hit/miss tracking
-   - Cost Optimization: Reduced costs for cached content (¥0.1/M vs ¥1/M)
-   - Usage Metrics: Detailed token and cost tracking
-   - Request Retries: Automatic retry for unstable operations
+To install the extensions, follow these steps:
 
-4. **Advanced Controls**
-   - Temperature Control: Task-specific randomness settings
-   - Top-K Sampling: Control output token diversity
-   - Top-P Filtering: Nucleus sampling for better quality
-   - Beta Features: Support for prefix and FIM capabilities
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/aporb/webui-extentions.git
+   ```
+2. Navigate to the repository directory:
+   ```bash
+   cd webui-extentions
+   ```
 
-5. **Error Handling**
-   - Status Codes: Specific error codes with descriptions
-   - Validation: Input parameter and response validation
-   - Recovery: Automatic recovery from transient errors
-   - Logging: Comprehensive error and usage logging
+## Usage
 
-#### Usage
+### DeepSeek V3 Integration
 
-The DeepSeek API integration is implemented in `deepseek_v3_1.py`. To use it:
+To use the DeepSeek V3 integration, follow these steps:
 
-1. Set up your API key in the options
-2. Initialize the pipe function in Open WebUI
-3. Make requests in the chat by selecting "deepseek-chat"
+1. **Set Up API Key**: Ensure you have your DeepSeek API key set in the environment variables or directly in the script.
+2. **Configure Open WebUI**: Add the DeepSeek extension to your Open WebUI configuration.
+3. **Run the Extension**: Start Open WebUI and use the DeepSeek integration to interact with the model.
 
-#### Configuration
-
-The DeepSeek integration supports various configuration options through the `Valves` class:
-
-- `temperature`: Controls randomness (0.0-2.0)
-- `top_k`: Limits sampling to top-k tokens
-- `top_p`: Controls diversity via nucleus sampling (0.0-1.0)
-- `max_tokens`: Maximum tokens to generate (1-8192)
-- `stream`: Enable streaming responses
-- `response_format`: Output format (text/json_object)
-- `enable_beta_features`: Enable experimental features
-- `enable_context_cache`: Enable context caching
-- `function_call_retry`: Number of retries for unstable function calls
-
-## License
-
-Free for non-commercial use.
-
-## Author
-
-Amyn Porbanderwala  
-Email: amyn@porbanderwala.com  
-Website: www.porbanderwala.com
+For more detailed instructions, refer to the [DeepSeek V3 Documentation](#deepseek-v3-documentation).
 
 ## Contributing
 
-More extensions and tools will be added soon. Contributions are welcome!
+We welcome contributions from the community! If you have an idea for a new extension or improvement, please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix.
+3. Submit a pull request with a detailed description of your changes.
+
+For more information, see our [Contributing Guidelines](CONTRIBUTING.md).
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+
+---
+
+### DeepSeek V3 Documentation
+
+#### Overview
+
+The DeepSeek V3 integration provides advanced language model capabilities, including:
+
+- **High Performance**: Achieve up to 60 tokens per second.
+- **Large Context Window**: Support for up to 8192 tokens.
+- **Vision Support**: Process and analyze image inputs.
+
+#### Configuration
+
+To configure the DeepSeek V3 integration, follow these steps:
+
+1. **Set API Key**: Ensure your DeepSeek API key is set in the environment variables or directly in the script.
+2. **Configure Open WebUI**: Add the DeepSeek extension to your Open WebUI configuration.
+3. **Run the Extension**: Start Open WebUI and use the DeepSeek integration to interact with the model.
+
+#### Usage
+
+- **Text Generation**: Generate standard text completion responses.
+- **JSON Mode**: Get validated JSON output with schema enforcement.
+- **Streaming**: Receive real-time token-by-token responses.
+- **Function Calling**: Define and execute external functions.
+
+For more detailed instructions, refer to the [DeepSeek V3 Documentation](#deepseek-v3-documentation).
+
+---
+
+### Support
+
+If you encounter any issues or have questions, please open an issue on the [GitHub repository](https://github.com/aporb/webui-extentions/issues).
+
+---
+
+### Author
+
+**Amyn Porbanderwala**  
+- **Email**: [amyn@porbanderwala.com](mailto:amyn@porbanderwala.com)  
+- **Website**: [www.porbanderwala.com](https://www.porbanderwala.com)  
+
+---
+
+### Acknowledgments
+
+- **Open WebUI**: For providing a powerful interface for AI interactions.
+- **DeepSeek**: For their advanced language model capabilities.
+
+---
+
+Thank you for using Open WebUI Extensions! We hope these tools enhance your experience with Open WebUI.
